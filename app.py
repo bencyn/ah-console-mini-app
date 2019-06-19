@@ -2,6 +2,7 @@
 import click
 import requests
 import pprint
+import json
 
 base_url = "https://ah-premier-staging.herokuapp.com/api/"
 
@@ -38,7 +39,7 @@ def list():
 
 @cli.command()
 @click.argument("slug")
-def article(slug):
+def view(slug):
 
     url_format = "articles/{}".format(slug)
     response = get(url_format)
@@ -46,3 +47,23 @@ def article(slug):
         click.echo(format(response.json()['article']))
     except Exception:
         exit(1)
+
+
+@cli.command()
+@click.argument("slug")
+def export(slug):
+    url_format = 'articles/{}'.format(slug)
+
+    response = get(url_format)
+    try:
+        data = response.json()
+    except Exception:
+        click.secho("response error", fg="red")
+
+    try:
+        with open('exports/articles/article.json', 'w') as outfile:
+            json.dump(data, outfile)
+        click.secho(
+            "Article {} exported successfully ".format(slug), fg="green")
+    except Exception as error:
+        click.secho(str(error), fg="red")

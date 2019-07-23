@@ -5,7 +5,14 @@ setup(
     version='0.1',
     py_modules=['app'],
     install_requires=[
-        'Click', 'Requests',
+            "Click",
+            "requests",
+            "halo",
+            "pytest",
+            "pytest-cov>=2.4.0,<2.6",
+            "coverage",
+            "coveralls",
+
     ],
     entry_points='''
         [console_scripts]

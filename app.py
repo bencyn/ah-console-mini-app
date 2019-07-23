@@ -34,7 +34,7 @@ def list():
     try:
         click.echo(format(response.json()['articles']))
     except Exception:
-        click.secho("List article response error", fg="red")
+        click.secho("Article does not exist", fg="red")
 
 
 @cli.command()
@@ -43,10 +43,20 @@ def view(slug):
 
     url_format = "articles/{}".format(slug)
     response = get(url_format)
+
     try:
         click.echo(format(response.json()['article']))
     except Exception:
-        exit(1)
+        click.secho("List article response error", fg="red")
+
+
+@cli.command()
+@click.argument("param")
+def search(param):
+
+    url_format = "articles?title={}".format(param)
+    response = get(url_format)
+    click.echo(format(response.json()['articles']))
 
 
 @cli.command()

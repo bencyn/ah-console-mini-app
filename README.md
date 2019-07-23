@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bencyn/ah-console-mini-app.svg?branch=develop)](https://travis-ci.org/bencyn/ah-console-mini-app) [![Coverage Status](https://coveralls.io/repos/github/bencyn/ah-console-mini-app/badge.svg?branch=story/unit-testing)](https://coveralls.io/github/bencyn/ah-console-mini-app?branch=story/unit-testing)
+[![Build Status](https://travis-ci.org/bencyn/ah-console-mini-app.svg?branch=develop)](https://travis-ci.org/bencyn/ah-console-mini-app) [![Coverage Status](https://coveralls.io/repos/github/bencyn/ah-console-mini-app/badge.svg?branch=develop)](https://coveralls.io/github/bencyn/ah-console-mini-app?branch=develop)
 
 ## AH Console Mini App
 

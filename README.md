@@ -4,6 +4,19 @@
 
 A CLI app that interacts with Author's Haven
 
+### Set up application
+-  clone the repository 
+    `git clone https://github.com/bencyn/ah-console-mini-app.git`
+
+- create a virtual environment
+  `virtualenv --python python3 venv`
+
+- install the app
+   `pip install --editable .`
+
+-  run app 
+   `ah`.
+
 ## Commands
 
 1. View all articles
@@ -17,7 +30,12 @@ A CLI app that interacts with Author's Haven
 3. Save specific article to file
 
    `ah export <article-slug>`
+  
+4. Search using a query string
+
+   `ah search <query-string>`
 
 4. View Ah help
 
    `ah help`
+
